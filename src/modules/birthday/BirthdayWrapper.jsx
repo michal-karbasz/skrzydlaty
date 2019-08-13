@@ -3,6 +3,7 @@ import { List, Icon, Collapse } from 'antd';
 import styled from 'styled-components';
 
 import { colors } from '../../commons/config.js';
+import { StyledParagraph } from '../../commons/StyledParagraph';
 
 const birthdayInfo = {
     basic: [
@@ -44,7 +45,7 @@ const Gallery = styled.iframe`
 `;
 
 export const BirthdayWrapper = () => (
-    <section>
+    <StyledParagraph>
         <h3>ARTYSTYCZNE URODZINY W SKRZYDLATYM</h3>
         <h4>Propozycje artystyczne:</h4>
         <p>
@@ -103,8 +104,7 @@ export const BirthdayWrapper = () => (
             src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fskrzydlaty.domek.rybnik%2Fvideos%2F855366474799005%2F&show_text=0&width=476"
             scrolling="no"
             frameborder="0"
-            allowTransparency="true"
-            allowFullScreen="true"
+            allowFullScreen={true}
         />
         <Collapse defaultActiveKey={['1']}>
             <Collapse.Panel header="Regulamin urodzin artystycznych:" key="1">
@@ -115,5 +115,5 @@ export const BirthdayWrapper = () => (
                 />
             </Collapse.Panel>
         </Collapse>
-    </section>
+    </StyledParagraph>
 );

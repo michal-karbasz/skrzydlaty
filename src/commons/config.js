@@ -14,10 +14,6 @@ export const breakpoints = {
     xl: '@media (min-width: 1200px)',
 };
 
-export const dimensions = {
-    footerHeight: '200px',
-};
-
 export const animations = {
     initialDelay: '1s',
 };

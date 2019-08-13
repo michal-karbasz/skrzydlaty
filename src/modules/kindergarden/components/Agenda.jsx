@@ -1,6 +1,5 @@
 import React from 'react';
 import { Table } from 'antd';
-import styled from 'styled-components';
 
 const activities = [
     { key: '1', hours: '7.30 - 8.30', activity: 'schodzenie się rycerzy i księżniczek' },

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import ReactBnbGallery from 'react-bnb-gallery';
-import styled from 'styled-components';
 
 import { AppContext } from '../../../appContext.js';
 import { pictures } from './index.js';
@@ -14,7 +13,7 @@ export const GalleryModal = () => {
     return (
         <ReactBnbGallery
             show={state.isModalVisible}
-            photos={pictures}
+            photos={pictures.originals}
             activePhotoIndex={state.imageClicked - 1}
             onClose={() => handleCancel(setState)}
         />

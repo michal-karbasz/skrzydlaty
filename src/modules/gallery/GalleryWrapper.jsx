@@ -17,7 +17,7 @@ export const GalleryWrapper = () => {
     const [state] = useContext(AppContext);
     return (
         <StyledSection>
-            {pictures.map((source, i) => (
+            {pictures.thumbs.map((source, i) => (
                 <GalleryItem key={source.number} source={source} title={i} />
             ))}
             <GalleryModal source={state.imageClicked} />

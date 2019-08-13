@@ -1,14 +1,24 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-import { colors } from '../../../commons/config';
 import { AppContext } from '../../../appContext';
+import { breakpoints } from '../../../commons/config';
 
 const Image = styled.img`
-    width: ${props => (props.big ? '600px' : '240px')}
-    height: ${props => (props.big ? '600px' : '160px')};
+    width: 240px;
+    height: 160px;
     border-radius: 2%;
-    margin-bottom: 15px;
+    margin: 0 10px 10px 0;
+
+    ${breakpoints.md} {
+        width: 180px;
+        height: 120px;
+    }
+    ${breakpoints.xs} {
+        width: 120px;
+        height: 90px;
+        margin: 0 5px 5px 0;
+    }
 `;
 
 export const GalleryItem = props => {

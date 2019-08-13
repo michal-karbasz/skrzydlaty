@@ -15,6 +15,12 @@ const StyledPortrait = styled.img`
     margin-bottom: 15px;
 `;
 
+const StyledCollapse = styled(Collapse)`
+    && {
+        margin: 30px 0;
+    }
+`;
+
 export const Kasia = () => (
     <StyledParagraph>
         <p>
@@ -29,10 +35,10 @@ export const Kasia = () => (
             Poniżej mała odsłona mojej osoby w wywiadzie przeprowadzonym za mną przez Monikę Kogut,
             autorkę bloga <em>Piękna Dziewczyna</em>.
         </p>
-        <Collapse>
+        <StyledCollapse>
             <Panel header="kliknij aby przeczytać wywiad" key="1">
                 <Interview />
             </Panel>
-        </Collapse>
+        </StyledCollapse>
     </StyledParagraph>
 );

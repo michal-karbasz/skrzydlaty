@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, animations } from '../../../commons/config';
+import { colors, breakpoints } from '../../../commons/config';
 
 const CenteredRow = styled.div`
     display: flex;
@@ -9,17 +9,36 @@ const CenteredRow = styled.div`
     align-items: center;
 `;
 
-const Title = styled.h1`
-    font-size: 58px;
-    color: ${colors.primary}
-    text-transform: capitalize;
-opacity: 0;
+const PreTitle = styled.span`
+    color: ${colors.complementary};
+    font-size: 30px;
+    opacity: 0;
     @keyframes fadeIn {
         100% {
             opacity: 1;
         }
     }
-    animation: fadeIn 2.5s ${animations.initialDelay} forwards;
+    animation: fadeIn 2.5s 1.5s forwards;
+    ${breakpoints.xs} {
+        font-size: 24px;
+    }
+`;
+
+const Title = styled.h1`
+    font-size: 58px;
+    color: ${colors.primary};
+    text-transform: capitalize;
+    opacity: 0;
+    @keyframes fadeIn {
+        100% {
+            opacity: 1;
+        }
+    }
+    animation: fadeIn 3s 1.5s forwards;
+
+    ${breakpoints.xs} {
+        font-size: 40px;
+    }
 `;
 
 const SubTitle = styled.span`
@@ -32,19 +51,7 @@ const SubTitle = styled.span`
             opacity: 1;
         }
     }
-    animation: fadeIn 2s 2s forwards;
-`;
-
-const PreTitle = styled.span`
-    color: ${colors.complementary};
-    font-size: 30px;
-    opacity: 0;
-    @keyframes fadeIn {
-        100% {
-            opacity: 1;
-        }
-    }
-    animation: fadeIn 2s 1.5s forwards;
+    animation: fadeIn 3s 2.5s forwards;
 `;
 
 export const TitleRow = () => (

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { colors } from '../../../commons/config';
+import { colors, breakpoints } from '../../../commons/config';
 import { AppContext } from '../../../appContext';
 
 import coronet from '../../../assets/wieniec.jpeg';
@@ -51,6 +51,18 @@ const Coronet = styled.div`
         }
     }
     animation: fadeIn 3s ${props => props.pop} forwards;
+
+    ${breakpoints.lg} {
+        min-width: ${props => (props.big ? '150px' : '150px')};
+        min-height: ${props => (props.big ? '110px' : '110px')};
+    }
+    ${breakpoints.md} {
+        flex-grow:3;
+    }
+    ${breakpoints.md} {
+        min-width: 130px
+        min-height: 90px
+    }
 `;
 
 const Icon = styled.img`
@@ -60,6 +72,15 @@ const Icon = styled.img`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    ${breakpoints.lg} {
+        width: 50px;
+        height: 50px;
+    }
+    ${breakpoints.sm} {
+        width: 45px;
+        height: 45px;
+    }
 `;
 
 export const MenuItem = props => {

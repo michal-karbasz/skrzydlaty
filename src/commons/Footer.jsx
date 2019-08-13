@@ -5,14 +5,7 @@ import { Layout, Descriptions, Icon, Col, Row } from 'antd';
 import { colors } from './config';
 import { Ornament } from './Ornament';
 
-import logo from '../assets/skrzydlate_logo.jpeg';
-
 const { Item } = Descriptions;
-
-const Image = styled.img`
-    width: 40px;
-    height: auto;
-`;
 
 const Footer = styled(Layout.Footer)`
     position: sticky;

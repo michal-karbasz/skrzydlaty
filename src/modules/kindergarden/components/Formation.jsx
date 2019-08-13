@@ -1,7 +1,14 @@
 import React from 'react';
-import { List, Collapse, Icon } from 'antd';
+import styled from 'styled-components';
+import { List, Collapse } from 'antd';
 
 import { StyledParagraph } from '../../../commons/StyledParagraph';
+
+const StyledCollapse = styled(Collapse)`
+    && {
+        margin: 30px 0;
+    }
+`;
 
 const data = [
     {
@@ -73,8 +80,8 @@ export const Formation = () => (
             warsztatów podejmujących ważne zagadnienia wychowawcze.
         </p>
 
-        <Collapse expandIcon={() => <Icon type="plus-circle" />}>
-            <Collapse.Panel header="kliknij aby poznać szczegóły" key="1">
+        <StyledCollapse>
+            <Collapse.Panel header="szczegółowy program nauczania" key="1">
                 <List
                     itemLayout="horizontal"
                     dataSource={data}
@@ -85,6 +92,6 @@ export const Formation = () => (
                     )}
                 />
             </Collapse.Panel>
-        </Collapse>
+        </StyledCollapse>
     </StyledParagraph>
 );

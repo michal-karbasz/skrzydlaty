@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { StyledParagraph } from '../../../commons/StyledParagraph';
-import groupPic from '../../../assets/gallery/16.JPG';
+import groupPic from '../../../assets/gallery/19.JPG';
 
 const StyledImg = styled.img`
 width: 100%
