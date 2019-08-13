@@ -17,7 +17,7 @@ const SubscribeForm = props => {
     const { getFieldDecorator } = props.form;
     return (
         <Form onSubmit={handleSubmit} className="login-form">
-            <Form.Item label="Imię i nazwisko">
+            <Form.Item label="Imię i nazwisko" style={{ width: '75%' }}>
                 {getFieldDecorator('name', {
                     rules: [{ required: true, message: 'Wpisz swoje imię i nazwisko' }],
                 })(
@@ -27,7 +27,7 @@ const SubscribeForm = props => {
                     />,
                 )}
             </Form.Item>
-            <Form.Item label="E-mail">
+            <Form.Item label="E-mail" style={{ width: '75%' }}>
                 {getFieldDecorator('email', {
                     rules: [
                         {
@@ -46,7 +46,7 @@ const SubscribeForm = props => {
                     />,
                 )}
             </Form.Item>
-            <Form.Item label="Imię dziecka">
+            <Form.Item label="Imię dziecka" style={{ width: '75%' }}>
                 {getFieldDecorator('childName', {
                     rules: [{ required: true, message: 'Wpisz imię dziecka' }],
                 })(
@@ -56,7 +56,7 @@ const SubscribeForm = props => {
                     />,
                 )}
             </Form.Item>
-            <Form.Item label="Wiek dziecka">
+            <Form.Item label="Wiek dziecka" style={{ width: '75%' }}>
                 {getFieldDecorator('childAge', {
                     rules: [{ required: true, message: 'Wybierz wiek dziecka' }],
                 })(
@@ -74,7 +74,7 @@ const SubscribeForm = props => {
                     </Select>,
                 )}
             </Form.Item>
-            <Form.Item label="Wiadomość">
+            <Form.Item label="Wiadomość" style={{ width: '75%' }}>
                 {getFieldDecorator('message', {
                     rules: [{ required: true, message: 'Wpisz treść wiadomości' }],
                 })(<Input.TextArea placeholder="..." autosize={{ minRows: 3, maxRows: 8 }} />)}
