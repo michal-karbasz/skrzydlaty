@@ -71,22 +71,15 @@ const Logo = styled.img`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 110px;
-    height: auto;
-    ${breakpoints.md} {
-        max-width: 90px;
-    }
-    ${breakpoints.xs} {
-        max-width: 50px;
-    }
+    width: 10vh;
 `;
 
 const Coronet = styled.div`
     background: url(${coronet}) center;
     background-size: contain;
     background-repeat: no-repeat;
-    min-width: 320px;
-    min-height: 280px;
+    width: 26vh;
+    height: 26vh;
     opacity: 0;
     z-index: 999;
     transition: 0.5s;
@@ -96,15 +89,6 @@ const Coronet = styled.div`
         }
     }
     animation: fadeIn 3s 1s forwards;
-
-    ${breakpoints.md} {
-        min-width: 240px;
-        min-height: 200px;
-    }
-    ${breakpoints.xs} {
-        min-width: 160px;
-        min-height: 120px;
-    }
 `;
 
 const StyledCol = styled(Col)`
@@ -112,6 +96,11 @@ const StyledCol = styled(Col)`
     ${breakpoints.md} {
         margin-top: unset;
     }
+`;
+
+const CenteredRow = styled.div`
+    display: flex;
+    justify-content: center;
 `;
 
 export const LogoRow = () => (
@@ -124,12 +113,12 @@ export const LogoRow = () => (
                 <ReverseSprite />
             </Col>
         </Row>
-        <Row>
+        <CenteredRow>
             <StyledCol>
                 <Coronet>
                     <Logo src={logo} alt="logo" />
                 </Coronet>
             </StyledCol>
-        </Row>
+        </CenteredRow>
     </>
 );

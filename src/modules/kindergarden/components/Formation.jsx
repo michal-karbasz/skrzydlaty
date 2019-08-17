@@ -45,27 +45,6 @@ const data = [
 
 export const Formation = () => (
     <StyledParagraph>
-        <h4>ZIARENKA W NAZARECIE</h4>
-        <p>
-            Jezus przez 30 lat przebywał w Nazarecie, w bliskości swoich rodziców - Maryi i Józefa.
-            Jako małe Boże ziarenko pięknie wzrastał na chwałę Boga i ludzi. W atmosferze pokoju i
-            miłości uczył się dawać i przyjmować Miłość. Z czasem Ziarno stało się silnym drzewem,
-            gotowym na to, by każdy bliźni znalazł schronienie w jego gałęziach. Z czasem Jezus stał
-            się gotowy, by wypłynąć na głębię życia...
-        </p>
-        <p>
-            I tak sobie myślę, że wielka nauka płynie dla nas - rodziców, opiekunów, wychowawców
-            dzieci w w wieku przedszkolnym - z przyglądania się życiu Świętej Rodziny. Nasze dzieci,
-            małe Boże ziarenka, do wzrostu w sferze duchowej, intelektualnej i emocjonalnej
-            potrzebują przede wszystkim rodziców oraz wsparcia tylko takich miejsc, które będą
-            wspierać (nie podważać) autorytet rodzicielski.
-        </p>
-        <p>
-            Charyzmatem Skrzydlatego Domku jest zatem stworzenie małego Nazaretu (naszym atutem jest
-            domowa atmosfera i panująca życzliwość), zachwyt otaczającym światem ( stąd różnorodność
-            zajęć dla dzieci ) żywa współpraca z rodzicami, która jest konieczna do pięknego wzrostu
-            ziarna oraz modlitwa, która scala wszystkie nasze działania w piękną całość.
-        </p>
         <h4>Inspirując się życiem Świętej Rodziny z Nazaretu, pragniemy:</h4>
         <p>
             1. Wspierać dzieci duchowo, intelektualnie i emocjonalnie w wieku od 2,5 lat do 5 lat w
@@ -80,8 +59,8 @@ export const Formation = () => (
             warsztatów podejmujących ważne zagadnienia wychowawcze.
         </p>
 
-        <StyledCollapse>
-            <Collapse.Panel header="szczegółowy program nauczania" key="1">
+        <StyledCollapse defaultActiveKey={['1']}>
+            <Collapse.Panel header="poznaj szczegóły:" key="1">
                 <List
                     itemLayout="horizontal"
                     dataSource={data}

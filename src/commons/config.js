@@ -19,6 +19,6 @@ export const animations = {
 };
 
 export const fonts = {
-    sectionSize: '18px',
+    sectionSize: '16px',
     small: '16px',
 };

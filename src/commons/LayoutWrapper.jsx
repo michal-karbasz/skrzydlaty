@@ -7,9 +7,10 @@ import history from './history';
 import { Routes } from './Routes';
 import { ContactFooter } from '../commons/Footer';
 import { CustomBackTop } from './CustomBackTop';
+import { FbLink } from './FbLink';
 
 const StyledLayout = styled(Layout)`
-    min-height: 90vh;
+    min-height: 100vh;
 `;
 
 export const LayoutWrapper = () => (
@@ -18,6 +19,7 @@ export const LayoutWrapper = () => (
             <Routes />
         </StyledLayout>
         <ContactFooter />
+        <FbLink />
         <CustomBackTop visibilityHeight={150} />
     </Router>
 );

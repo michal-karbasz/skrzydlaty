@@ -8,18 +8,25 @@ import { AppContext } from '../../../appContext';
 import coronet from '../../../assets/wieniec.jpeg';
 
 const IconText = styled.span`
-    font-size: 18px;
+    font-size: 17px;
     transition: color 0.5s;
     opacity: 0;
     color: ${props =>
         props.activeLink === props.children ? colors.complementary : colors.primary};
-
+    margin-bottom: 5px;
     @keyframes fadeIn {
         100% {
             opacity: 1;
         }
     }
     animation: fadeIn 3s ${props => props.pop} forwards;
+
+    ${breakpoints.md} {
+        font-size: 14px;
+    }
+    ${breakpoints.xs} {
+        font-size: 12px;
+    }
 `;
 
 const StyledCol = styled.div`
@@ -35,8 +42,8 @@ const Coronet = styled.div`
     background: url(${coronet}) center;
     background-size: contain;
     background-repeat: no-repeat;
-    min-width: ${props => (props.big ? '190px' : '160px')};
-    min-height: ${props => (props.big ? '150px' : '120px')};
+    min-width: ${props => (props.big ? '24vh' : '20vh')};
+    min-height: ${props => (props.big ? '16vh' : '14vh')};
     position: relative;
     opacity: 0;
     transition: 0.5s;
@@ -51,36 +58,15 @@ const Coronet = styled.div`
         }
     }
     animation: fadeIn 3s ${props => props.pop} forwards;
-
-    ${breakpoints.lg} {
-        min-width: ${props => (props.big ? '150px' : '150px')};
-        min-height: ${props => (props.big ? '110px' : '110px')};
-    }
-    ${breakpoints.md} {
-        flex-grow:3;
-    }
-    ${breakpoints.md} {
-        min-width: 130px
-        min-height: 90px
-    }
 `;
 
 const Icon = styled.img`
-    width: ${props => (props.big ? '70px' : '50px')};
-    height: ${props => (props.big ? '70px' : '50px')};
+    width: ${props => (props.big ? '8vh' : '7vh')};
+    height: ${props => (props.big ? '8vh' : '7vh')};
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    ${breakpoints.lg} {
-        width: 50px;
-        height: 50px;
-    }
-    ${breakpoints.sm} {
-        width: 45px;
-        height: 45px;
-    }
 `;
 
 export const MenuItem = props => {

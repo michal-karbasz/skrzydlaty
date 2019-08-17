@@ -8,7 +8,7 @@ import { AppContext } from '../../appContext.js';
 import { breakpoints } from '../../commons/config.js';
 
 const StyledRow = styled(Row)`
-    margin: 30px 0 ${props => (props.big ? '0' : '35px')} 0;
+    margin: 30px 0 ${props => (props.big ? '0' : '30px')} 0;
     flex-direction: 'row';
     ${breakpoints.xs} {
         margin: 30px 0 50px 0;

@@ -20,7 +20,10 @@ const PreTitle = styled.span`
     }
     animation: fadeIn 2.5s 1.5s forwards;
     ${breakpoints.xs} {
-        font-size: 24px;
+        font-size: 20px;
+    }
+    ${breakpoints.sm} {
+        font-size: 22px;
     }
 `;
 
@@ -36,8 +39,11 @@ const Title = styled.h1`
     }
     animation: fadeIn 3s 1.5s forwards;
 
+    ${breakpoints.sm} {
+        font-size: 26px;
+    }
     ${breakpoints.xs} {
-        font-size: 40px;
+        font-size: 20px;
     }
 `;
 

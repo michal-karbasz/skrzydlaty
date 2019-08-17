@@ -16,7 +16,6 @@ const workshopsInfo = [
 ];
 
 const Message = styled.h3`
-    border: 2px dashed ${colors.complementary};
     padding: 5px;
 `;
 

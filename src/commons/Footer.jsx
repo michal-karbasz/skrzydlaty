@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Layout, Descriptions, Icon, Col, Row } from 'antd';
+import { Layout, Icon } from 'antd';
 
 import { colors } from './config';
 import { Ornament } from './Ornament';
-
-const { Item } = Descriptions;
 
 const Footer = styled(Layout.Footer)`
     position: sticky;
@@ -14,25 +12,34 @@ const Footer = styled(Layout.Footer)`
     z-index: 999;
 `;
 
+const CustomRow = styled.div`
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+`;
+
+const Item = styled.span`
+    margin-left: 10px;
+`;
+
 export const ContactFooter = () => (
     <Footer>
         <Ornament />
-        <Row>
-            <Col xs={23} offset={1}>
-                <Descriptions title="Kontakt" column={{ xs: 1, sm: 2, md: 3, xl: 5 }}>
-                    <Item>Katarzyna Wieja</Item>
-                    <Item>
-                        <Icon type="phone" theme="twoTone" twoToneColor={colors.secondary} />
-                        {` 603 466 103`}
-                    </Item>
-                    <Item>
-                        <Icon type="mail" theme="twoTone" twoToneColor={colors.secondary} />
-                        {` skrzydaltydomek@gmail.com`}
-                    </Item>
-                    <Item>ul. Raciborska 36</Item>
-                    <Item>44-210 Rybnik</Item>
-                </Descriptions>
-            </Col>
-        </Row>
+        <CustomRow>
+            <Item>
+                <strong>Kontakt: </strong>Katarzyna Wieja
+            </Item>
+            <Item>
+                <Icon type="phone" theme="twoTone" twoToneColor={colors.secondary} />
+                {` 603 466 103`}
+            </Item>
+            <Item>
+                <Icon type="mail" theme="twoTone" twoToneColor={colors.secondary} />
+                {` skrzydlatydomek@gmail.com`}
+            </Item>
+            <Item> ul. Raciborska 36</Item>
+            <Item>44-210 Rybnik</Item>
+        </CustomRow>
     </Footer>
 );
