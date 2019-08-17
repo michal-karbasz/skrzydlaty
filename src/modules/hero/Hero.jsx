@@ -22,7 +22,7 @@ const StyledRow = styled(Row)`
 
 export const Hero = () => (
     <HeroWrapper type="flex" align="middle" justify="center">
-        <MenuWrapper big={true} pop />
+        <MenuWrapper big="true" pop />
         <LogoRow />
         <StyledRow>
             <TitleRow />
