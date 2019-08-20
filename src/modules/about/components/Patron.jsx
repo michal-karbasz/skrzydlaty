@@ -1,17 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import { Row, Col } from 'antd';
-import { StyledParagraph } from '../../../commons/StyledParagraph';
 
 import logo from '../../../assets/skrzydlate_logo.jpeg';
-const Prayer = styled.blockquote`
-    /* text-align: 'center'; */
-`;
+import { breakpoints } from '../../../commons/config';
+import { StyledParagraph } from '../../../commons/StyledParagraph';
+
+const Prayer = styled.blockquote``;
 
 const StyledLogo = styled.img`
-    width: 100%;
+    width: 75%;
     height: auto;
+    ${breakpoints.md} {
+        width: 30%;
+        margin: 15px 0;
+    }
+`;
+
+const StyledCol = styled(Col)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const Patron = () => (
@@ -26,6 +35,9 @@ export const Patron = () => (
             rodzin:
         </p>
         <Row type="flex" jusitfy="center">
+            <StyledCol xs={24} lg={10}>
+                <StyledLogo src={logo} alt="ilustracja Świętej Rodziny - logo przedszkola" />
+            </StyledCol>
             <Col offset={2} xs={20} lg={12}>
                 <Prayer>
                     „Boże, od którego pochodzi wszelkie ojcostwo na niebie i na ziemi, Ojcze, który
@@ -42,9 +54,6 @@ export const Patron = () => (
                     swe posłannictwo w rodzinach i poprzez rodziny. Przez Chrystusa Pana Naszego,
                     który jest Drogą, Prawdą i Życiem na wieki wieków. Amen."
                 </Prayer>
-            </Col>
-            <Col offset={1} xs={23} lg={9}>
-                <StyledLogo src={logo} alt="ilustracja Świętej Rodziny - logo przedszkola" />
             </Col>
         </Row>
     </StyledParagraph>

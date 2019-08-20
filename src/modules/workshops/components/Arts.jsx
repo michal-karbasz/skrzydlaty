@@ -22,6 +22,7 @@ const columns = [
 const Poster = styled.img`
     width: 100%;
     height: auto;
+    border-radius: 5px;
 `;
 
 export const Arts = () => (

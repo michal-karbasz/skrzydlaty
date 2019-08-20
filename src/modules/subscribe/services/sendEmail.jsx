@@ -11,9 +11,9 @@ const headers = {
 };
 
 const emailJSConfig = {
-    user_id: 'user_o2WFNWIiA5oD3RC5Q9IGx',
-    service_id: 'michal_karbasz_gmail_com',
-    template_id: 'template_Z7tP6DFi',
+    user_id: 'user_cLlDdEyZEU22x3GM7QBf5',
+    service_id: 'skrzydlatydomek',
+    template_id: 'template_h2DDaYta',
 };
 
 const setOptions = params => ({
