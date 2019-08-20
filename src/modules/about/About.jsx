@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Tabs } from 'antd';
 
 import { History } from './components/History';
@@ -11,7 +10,7 @@ const { TabPane } = Tabs;
 
 export const About = () => (
     <section>
-        <Tabs tabPosition="top">
+        <Tabs>
             <TabPane tab="skrzydlata historia" key="1">
                 <History />
             </TabPane>

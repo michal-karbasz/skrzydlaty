@@ -11,6 +11,7 @@ const IconText = styled.span`
     font-size: 17px;
     transition: color 0.5s;
     opacity: 0;
+    padding: 5px 15px;
     color: ${props =>
         props.activeLink === props.children ? colors.complementary : colors.primary};
     margin-bottom: 5px;
@@ -20,12 +21,8 @@ const IconText = styled.span`
         }
     }
     animation: fadeIn 3s ${props => props.pop} forwards;
-
     ${breakpoints.md} {
         font-size: 14px;
-    }
-    ${breakpoints.xs} {
-        font-size: 12px;
     }
 `;
 
@@ -33,6 +30,7 @@ const StyledCol = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
     :hover ${IconText} {
         color: ${colors.complementary};
     }

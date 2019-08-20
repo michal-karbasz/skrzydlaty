@@ -11,7 +11,7 @@ const HeroWrapper = styled(Layout.Content)`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
 `;
 
 const StyledRow = styled(Row)`
@@ -21,7 +21,7 @@ const StyledRow = styled(Row)`
 `;
 
 export const Hero = () => (
-    <HeroWrapper type="flex" align="middle" justify="center">
+    <HeroWrapper>
         <MenuWrapper big="true" pop />
         <LogoRow />
         <StyledRow>

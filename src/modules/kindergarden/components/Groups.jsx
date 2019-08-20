@@ -4,15 +4,11 @@ import { Row, Col } from 'antd';
 
 import { StyledParagraph } from '../../../commons/StyledParagraph';
 import groupPic from '../../../assets/gallery/8.JPG';
-import { breakpoints } from '../../../commons/config';
 
 const StyledImg = styled.img`
-width: 99%
-height: auto;
-border-radius: 5px;
-${breakpoints.xl} {
-    width: 90%;
-}
+    width: 99%;
+    height: auto;
+    border-radius: 5px;
 `;
 
 const StyledCol = styled(Col)`
@@ -24,7 +20,7 @@ const StyledCol = styled(Col)`
 export const Groups = () => (
     <StyledParagraph>
         <Row>
-            <Col xs={24} xl={12}>
+            <Col xs={24} xxl={12}>
                 <p>
                     W związku z tym, że w otaczającym nas świecie coraz bardziej niepokoi zjawisko
                     pomieszania ról, gdzie chłopcy bezrefleksyjnie stają się dziewczynkami a
@@ -41,7 +37,7 @@ export const Groups = () => (
                     zgłębiać istotę swego dziewczęcego powołania.
                 </p>
             </Col>
-            <StyledCol xs={24} xl={12}>
+            <StyledCol offset={1} xs={23} xxl={11}>
                 <StyledImg src={groupPic} alt="ciocia Kasia i dzieci" />
             </StyledCol>
         </Row>
