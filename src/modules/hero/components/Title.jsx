@@ -47,23 +47,9 @@ const Title = styled.h1`
     }
 `;
 
-const SubTitle = styled.span`
-    color: ${colors.complementary};
-    font-size: 20px;
-    margin-top: -20px;
-    opacity: 0;
-    @keyframes fadeIn {
-        100% {
-            opacity: 1;
-        }
-    }
-    animation: fadeIn 3s 2.5s forwards;
-`;
-
 export const TitleRow = () => (
     <CenteredRow>
         <PreTitle>centrum rodzin</PreTitle>
         <Title>skrzydlaty domek</Title>
-        <SubTitle>pomagamy wzrastać Twojemu dziecku</SubTitle>
     </CenteredRow>
 );

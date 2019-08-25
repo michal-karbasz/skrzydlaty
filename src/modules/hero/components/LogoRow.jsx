@@ -34,15 +34,12 @@ const Sprite = styled.div`
         }
         animation: growFrom993 1s steps(6) forwards;
     }
-
-}
     ${breakpoints.sm} {
         background: url(${spriteFull}) left center;
         animation: growFrom1201 1.2s steps(7) forwards;
     }
     ${breakpoints.xs} {
         display: none;
-    }
     }
 `;
 
@@ -78,8 +75,8 @@ const Coronet = styled.div`
     background: url(${coronet}) center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 26vh;
-    height: 26vh;
+    width: 28vh;
+    height: 28vh;
     opacity: 0;
     z-index: 999;
     transition: 0.5s;

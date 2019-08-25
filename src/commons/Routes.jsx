@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Route } from 'react-router-dom';
-import { AnimatedSwitch } from 'react-router-transition';
 
 import { Hero } from '../modules/hero/Hero';
 import { menuItems } from './menuItems';
@@ -11,15 +10,8 @@ import { ResultWrapper } from '../modules/subscribe/components/Result';
 
 export const Routes = () => (
     <>
-        <AnimatedSwitch
-            atEnter={{ opacity: 0.1 }}
-            atLeave={{ opacity: 0.1 }}
-            atActive={{ opacity: 1 }}
-            className="switch-wrapper"
-        >
-            <Route exact path="/" component={Hero} />
-            <Route component={MenuWrapper} />
-        </AnimatedSwitch>
+        <Route component={MenuWrapper} />;
+        <Route exact path="/" component={Hero} />
         {Object.values(menuItems).map(({ name, component }) => {
             const Wrapper = ContentWrapper(component);
 
