@@ -12,7 +12,7 @@ const { TabPane } = Tabs;
 export const KindergardenMain = () => (
     <section>
         <Tabs tabPosition="top">
-            <TabPane tab="atmosfera" key="1">
+            <TabPane tab="nasze atuty" key="1">
                 <Atmosphere />
             </TabPane>
             <TabPane tab="grupy" key="2">

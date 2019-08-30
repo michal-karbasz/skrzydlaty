@@ -25,7 +25,6 @@ const Sprite = styled.div`
         }
     }
     animation: growFrom1201 1s steps(7) forwards;
-
     ${breakpoints.lg} {
         @keyframes growFrom993 {
             100% {
@@ -68,26 +67,25 @@ const Logo = styled.img`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 10vh;
+    width: 12vh;
+    ${breakpoints.sm} {
+        width: 9vh;
+    }
 `;
 
 const Coronet = styled.div`
     background: url(${coronet}) center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 28vh;
-    height: 28vh;
-    opacity: 0;
+    width: 33vh;
+    height: 33vh;
     z-index: 999;
     transition: 0.5s;
-    @keyframes fadeIn {
-        100% {
-            opacity: 1;
-        }
+    ${breakpoints.sm} {
+        width: 24vh;
+        height: 24vh;
     }
-    animation: fadeIn 3s 1s forwards;
 `;
-
 const StyledCol = styled(Col)`
     margin-top: -25px;
     ${breakpoints.md} {

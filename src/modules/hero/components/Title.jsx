@@ -12,13 +12,7 @@ const CenteredRow = styled.div`
 const PreTitle = styled.span`
     color: ${colors.complementary};
     font-size: 30px;
-    opacity: 0;
-    @keyframes fadeIn {
-        100% {
-            opacity: 1;
-        }
-    }
-    animation: fadeIn 2.5s 1.5s forwards;
+    text-transform: uppercase;
     ${breakpoints.xs} {
         font-size: 20px;
     }
@@ -28,16 +22,9 @@ const PreTitle = styled.span`
 `;
 
 const Title = styled.h1`
-    font-size: 58px;
+    font-size: 46px;
     color: ${colors.primary};
-    text-transform: capitalize;
-    opacity: 0;
-    @keyframes fadeIn {
-        100% {
-            opacity: 1;
-        }
-    }
-    animation: fadeIn 3s 1.5s forwards;
+    text-transform: uppercase;
 
     ${breakpoints.sm} {
         font-size: 26px;

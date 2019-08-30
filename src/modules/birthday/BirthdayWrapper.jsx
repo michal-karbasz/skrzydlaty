@@ -44,8 +44,12 @@ const Gallery = styled.iframe`
     margin-bottom: 30px;
 `;
 
+const BirthdaySection = styled(StyledParagraph)`
+    margin-top: 20px;
+`;
+
 export const BirthdayWrapper = () => (
-    <StyledParagraph>
+    <BirthdaySection>
         <h3>ARTYSTYCZNE URODZINY W SKRZYDLATYM</h3>
         <h4>Propozycje artystyczne:</h4>
         <p>
@@ -115,5 +119,5 @@ export const BirthdayWrapper = () => (
                 />
             </Collapse.Panel>
         </Collapse>
-    </StyledParagraph>
+    </BirthdaySection>
 );

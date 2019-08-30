@@ -10,7 +10,7 @@ import { ResultWrapper } from '../modules/subscribe/components/Result';
 
 export const Routes = () => (
     <>
-        <Route component={MenuWrapper} />;
+        <Route render={props => <MenuWrapper {...props} pop="true" />} />
         <Route exact path="/" component={Hero} />
         {Object.values(menuItems).map(({ name, component }) => {
             const Wrapper = ContentWrapper(component);

@@ -17,6 +17,7 @@ const StyledRow = styled(Row)`
 
 export const MenuWrapper = props => {
     const [state] = useContext(AppContext);
+
     return (
         <StyledRow big={props.big} type="flex" align="middle" justify="center">
             {Object.values(menuItems).map(({ name, icon }, i) => (
@@ -25,7 +26,7 @@ export const MenuWrapper = props => {
                     name={name}
                     icon={icon}
                     big={props.big}
-                    pop={props.pop ? `${2.7 + i / 3}s` : '0.5s'}
+                    pop={!props.pop ? `${1.2 + i / 3}s` : '1.1s'}
                     activeLink={state.activeLink}
                 />
             ))}

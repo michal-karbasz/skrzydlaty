@@ -4,11 +4,16 @@ import { Row, Col } from 'antd';
 
 import { StyledParagraph } from '../../../commons/StyledParagraph';
 import groupPic from '../../../assets/gallery/8.JPG';
+import { breakpoints } from '../../../commons/config';
 
 const StyledImg = styled.img`
-    width: 99%;
+    width: 50%;
+    min-width: 350px;
     height: auto;
     border-radius: 5px;
+    ${breakpoints.xxl} {
+        width: 99%;
+    }
 `;
 
 const StyledCol = styled(Col)`

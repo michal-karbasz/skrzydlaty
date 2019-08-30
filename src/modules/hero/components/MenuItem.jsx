@@ -55,7 +55,7 @@ const Coronet = styled.div`
             opacity: 1;
         }
     }
-    animation: fadeIn 3s ${props => props.pop} forwards;
+    animation: fadeIn 2.5s ${props => props.pop} forwards;
 `;
 
 const Icon = styled.img`

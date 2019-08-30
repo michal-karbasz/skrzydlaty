@@ -41,7 +41,6 @@ export const Atmosphere = () => (
         </Row>
         <List
             dataSource={advantages}
-            // bordered={true}
             size="small"
             header="nasze atuty:"
             renderItem={item => (
@@ -51,6 +50,5 @@ export const Atmosphere = () => (
                 </List.Item>
             )}
         />
-        <CommentsWrapper />
     </StyledParagraph>
 );
